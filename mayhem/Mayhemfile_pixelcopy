@@ -1,0 +1,9 @@
+project: savantenvs/pygame
+target: pixelcopy
+cmds:
+  - cmd: /mayhem/fuzz_pixelcopy
+    libfuzzer: true
+    timeout: 10
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pixelcopy/testsuite

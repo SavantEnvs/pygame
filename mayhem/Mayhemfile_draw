@@ -1,0 +1,9 @@
+project: savantenvs/pygame
+target: draw
+cmds:
+  - cmd: /mayhem/fuzz_draw
+    libfuzzer: true
+    timeout: 10
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/draw/testsuite

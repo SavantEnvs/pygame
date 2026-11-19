@@ -1,0 +1,9 @@
+project: savantenvs/pygame
+target: mask
+cmds:
+  - cmd: /mayhem/fuzz_mask
+    libfuzzer: true
+    timeout: 10
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mask/testsuite

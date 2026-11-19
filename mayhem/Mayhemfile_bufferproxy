@@ -1,0 +1,9 @@
+project: savantenvs/pygame
+target: bufferproxy
+cmds:
+  - cmd: /mayhem/fuzz_bufferproxy
+    libfuzzer: true
+    timeout: 10
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bufferproxy/testsuite
